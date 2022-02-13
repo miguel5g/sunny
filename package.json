@@ -4,7 +4,7 @@
   "main": "src/index.ts",
   "repository": "https://github.com/miguel5g/sunny.git",
   "scripts": {
-    "start:dev": "set NODE_ENV=development && set DEBUG=api:* &&ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts"
+    "start:dev": "set NODE_ENV=development && set DEBUG=api:* && ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
