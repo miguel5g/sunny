@@ -5,7 +5,8 @@
   "repository": "https://github.com/miguel5g/sunny.git",
   "scripts": {
     "start:dev": "set NODE_ENV=development && set DEBUG=api:* && ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts",
-    "test": "set NODE_ENV=test && jest"
+    "test": "set NODE_ENV=test && jest",
+    "test:watch": "set NODE_ENV=test && jest --watch"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
