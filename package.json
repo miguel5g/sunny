@@ -7,8 +7,8 @@
     "start:dev": "set NODE_ENV=development && set DEBUG=api:* && ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts",
     "test": "set NODE_ENV=test && jest",
     "test:watch": "set NODE_ENV=test && jest --watch",
-    "lint": "eslint --ext .ts,tsx src",
-    "lint:fix": "eslint --ext .ts,tsx src --fix"
+    "lint": "eslint \"{src,__tests__}/**/*.ts\"",
+    "lint:fix": "eslint \"{src,__tests__}/**/*.ts\" --fix"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
