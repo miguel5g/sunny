@@ -5,7 +5,7 @@ import { app } from '../../src/app';
 describe('GetAppController', () => {
   let ghostAgent = supertest.agent(app);
 
-  it('should return 200', async () => {
+  it('should return status code 200', async () => {
     let response = await ghostAgent.get('/');
 
     expect(response.statusCode).toBe(200);
