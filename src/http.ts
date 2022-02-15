@@ -8,11 +8,11 @@ const server = createServer(app);
 const io = new Server(server, {
   cors: {
     origin: '*',
-  }
+  },
 });
 
 io.on('connection', (socket: Socket) => {
-  socketLogger(`${socket.id} connected`)
-})
+  socketLogger(`${socket.id} connected`);
+});
 
-export { server, io }
+export { server, io };
