@@ -1,6 +1,7 @@
 /*
   Warnings:
 
+  - A unique constraint covering the columns `[code]` on the table `users` will be added. If there are existing duplicate values, this will fail.
   - Added the required column `code` to the `users` table without a default value. This is not possible if the table is not empty.
   - Added the required column `password` to the `users` table without a default value. This is not possible if the table is not empty.
 
@@ -40,10 +41,16 @@ CREATE TABLE "_ChatToUser" (
 );
 
 -- CreateIndex
+CREATE UNIQUE INDEX "chats_code_key" ON "chats"("code");
+
+-- CreateIndex
 CREATE UNIQUE INDEX "_ChatToUser_AB_unique" ON "_ChatToUser"("A", "B");
 
 -- CreateIndex
 CREATE INDEX "_ChatToUser_B_index" ON "_ChatToUser"("B");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "users_code_key" ON "users"("code");
 
 -- AddForeignKey
 ALTER TABLE "messages" ADD CONSTRAINT "messages_author_id_fkey" FOREIGN KEY ("author_id") REFERENCES "users"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

@@ -14,7 +14,7 @@ model User {
   id        String    @id @default(uuid())
   email     String    @unique
   password  String
-  code      String
+  code      String    @unique
   avatarUrl String?   @map("avatar_url")
   messages  Message[]
   chats     Chat[]
@@ -40,7 +40,7 @@ model Message {
 model Chat {
   id        String    @id @default(uuid())
   name      String
-  code      String
+  code      String    @unique
   messages  Message[]
   members   User[]
   createdAt DateTime  @default(now()) @map("created_at")
