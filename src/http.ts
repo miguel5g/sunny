@@ -1,8 +1,8 @@
 import { createServer } from 'http';
 import { Server, Socket } from 'socket.io';
 
+import { socketLogger } from '@utils/logger';
 import { app } from './app';
-import { socketLogger } from './utils/logger';
 
 const server = createServer(app);
 const io = new Server(server, {
