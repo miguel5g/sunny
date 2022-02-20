@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
+import { appLogger, socketLogger } from '@utils/logger';
 import { server } from './http';
-import { appLogger, socketLogger } from './utils/logger';
 
 server.listen(process.env.PORT || 3000, () => {
   appLogger(`Server is running in http://localhost:${process.env.PORT || 3000}`);

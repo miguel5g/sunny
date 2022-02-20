@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { Logger } from './middlewares/Logger';
+import { Logger } from '@middlewares/Logger';
 
 const routes = Router();
 

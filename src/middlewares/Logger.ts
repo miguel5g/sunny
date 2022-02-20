@@ -1,6 +1,6 @@
 import type { NextFunction, Request, Response } from 'express';
 
-import { routesLogger } from '../utils/logger';
+import { routesLogger } from '@utils/logger';
 
 export function Logger(request: Request, _: Response, next: NextFunction) {
   // Log the request method and path
