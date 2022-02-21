@@ -11,4 +11,6 @@ app.use(cookieParser());
 
 app.use(routes);
 
+app.locals.startTime = Date.now();
+
 export { app };
