@@ -12,7 +12,7 @@ describe('GetAppController', () => {
   });
 
   it('should return the correct body schema', async () => {
-    const { body, } = (await ghostAgent.get('/')) as {
+    const { body } = (await ghostAgent.get('/')) as {
       body?: { app: string; environment: string; lifetime: number };
     };
 
