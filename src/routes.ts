@@ -7,6 +7,6 @@ const routes = Router();
 
 routes.use(Logger); // Logger middleware
 
-routes.get('/', new AppController().handle);
+routes.get('/', AppController.handle);
 
 export { routes };
