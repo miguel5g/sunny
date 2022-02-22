@@ -40,6 +40,13 @@
       {
         "ts": "never"
       }
+    ],
+    "class-methods-use-this": ["off"],
+    "@typescript-eslint/unbound-method": [
+      "error",
+      {
+        "ignoreStatic": true
+      }
     ]
   }
 }
